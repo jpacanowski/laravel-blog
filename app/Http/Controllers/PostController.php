@@ -13,4 +13,10 @@ class PostController extends Controller
         $posts = Post::all();
         return view('posts.index', compact('posts'));
     }
+
+    public function show($slug)
+    {
+        $post = Post::where('slug', $slug)->first();
+        return view('posts.show', compact('post'));
+    }
 }
