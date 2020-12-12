@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\AdminController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,6 +15,8 @@ use App\Http\Controllers\PostController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/admin', [AdminController::class, 'index']);
 
 Route::get('/', [PostController::class, 'index']);
 Route::get('/{slug}', [PostController::class, 'show']);
