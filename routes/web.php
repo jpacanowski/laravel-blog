@@ -17,6 +17,7 @@ use App\Http\Controllers\AdminController;
 */
 
 Route::get('/admin', [AdminController::class, 'index']);
+Route::get('/admin/posts', [AdminController::class, 'posts']);
 
 Route::get('/', [PostController::class, 'index']);
 Route::get('/{slug}', [PostController::class, 'show']);

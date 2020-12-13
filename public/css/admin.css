@@ -266,11 +266,11 @@ i.fa-power-off {
 }
 
 .post-entry a {
-	color: #23527c;
+	color: #0073aa;
 }
 
 .post-entry a:hover {
-	color: #337ab7;
+	color: #23527c;
 }
 
 .post-entry span {
@@ -313,6 +313,12 @@ i.fa-power-off {
 	padding: 0;
 }
 
+.post-status {
+	color: #777;
+	font-weight: 700;
+	margin-left: 10px;
+}
+
 .button {
 	border: 0;
 	margin-top: 24px;
@@ -341,6 +347,14 @@ i.fa-power-off {
 	font-size: 9px !important;
 	color: #fff !important;
 	background: #dc3545;
+	padding: 2px 4px;
+}
+
+.btn-publish {
+	font-weight: 700;
+	font-size: 9px !important;
+	color: #fff !important;
+	background: #3cb371;
 	padding: 2px 4px;
 }
 
