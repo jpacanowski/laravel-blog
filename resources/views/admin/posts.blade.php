@@ -25,10 +25,11 @@
                     <a href="/admin/posts/update/{{$post->id}}" class="btn-edit">Edytuj</a>
                   </li>
                   <li>
-                    <form class="form_delete" method="POST" action="admin/posts/delete/{{$post->id}}">
-                      <input type="hidden" name="_method" value="DELETE" />
-                      <input type="hidden" name="_token" value="{{ 'csrf_token()' }}" />
-                      <a href="/admin/posts/delete/{{$post->id}}" class="btn-delete" onclick="event.target.parentNode.submit(); return false;">Usuń</a>
+                    <form class="form_delete" method="POST" action="/posts/delete/{{$post->id}}">
+                      @csrf
+                      @method('DELETE')
+                      <!-- <a href="/admin/posts/delete/{{$post->id}}" class="btn-delete" onclick="event.target.parentNode.submit(); return false;">Usuń</a> -->
+                      <button type="submit" class="btn-delete">Usuń</button>
                     </form>
                   </li>
                 </ul>
@@ -47,10 +48,11 @@
                     <a href="/admin/posts/update/{{$post->id}}" class="btn-edit">Edytuj</a>
                   </li>
                   <li>
-                    <form class="form_delete" method="POST" action="admin/posts/delete/{{$post->id}}">
-                      <input type="hidden" name="_method" value="DELETE" />
-                      <input type="hidden" name="_token" value="{{ 'csrf_token()' }}" />
-                      <a href="/admin/posts/delete/{{$post->id}}" class="btn-delete" onclick="event.target.parentNode.submit(); return false;">Usuń</a>
+                  <form class="form_delete" method="POST" action="/posts/delete/{{$post->id}}">
+                      @csrf
+                      @method('DELETE')
+                      <!-- <a href="/admin/posts/delete/{{$post->id}}" class="btn-delete" onclick="event.target.parentNode.submit(); return false;">Usuń</a> -->
+                      <button type="submit" class="btn-delete">Usuń</button>
                     </form>
                   </li>
                   <li>

@@ -346,8 +346,8 @@ i.fa-power-off {
 	font-weight: 700;
 	font-size: 9px !important;
 	color: #fff !important;
-	background: #dc3545;
-	padding: 2px 4px;
+	background: #dc3545 !important;
+	padding: 2px 4px !important;
 }
 
 .btn-publish {

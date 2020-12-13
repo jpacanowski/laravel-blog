@@ -43,13 +43,28 @@ class PostController extends Controller
             'status' => 'published'
         ];
 
-        if(!is_null(Post::create($post))) {
+        if(!is_null(Post::create($post)))
+        {
             return redirect('/admin/posts')
             ->with('success', 'Post created successfully.');
         }
-        else {
-            return back()
-            ->with('failed', 'Post not created.');
+        else
+        {
+            return back()->with('failed', 'Post not created.');
+        }
+    }
+
+    public function destroy($id)
+    {
+        $post = Post::find($id);
+
+        if(!is_null($post->delete()))
+        {
+            return back()->with('success', 'Post deleted successfully.');
+        }
+        else
+        {
+            return back()->with('failed', 'Post not deleted.');
         }
     }
 }
