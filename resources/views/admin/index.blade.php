@@ -30,6 +30,14 @@
             </div>
           </div>
         </li>
+        <li>
+          <div class="infobox">
+            <div class="infobox-inner">
+              <p>{{ $drafts_count }}</p>
+              <h3>Drafts number</h3>
+            </div>
+          </div>
+        </li>
       </ul>
 
     </main>
