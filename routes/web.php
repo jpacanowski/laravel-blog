@@ -16,8 +16,11 @@ use App\Http\Controllers\AdminController;
 |
 */
 
+// ADMIN
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/posts', [AdminController::class, 'posts']);
+Route::get('/admin/posts/create', [PostController::class, 'create']);
 
+// PUBLIC
 Route::get('/', [PostController::class, 'index']);
 Route::get('/{slug}', [PostController::class, 'show']);

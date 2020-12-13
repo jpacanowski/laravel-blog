@@ -21,4 +21,9 @@ class PostController extends Controller
         $post = Post::where('slug', $slug)->first();
         return view('posts.show', compact('post'));
     }
+
+    public function create()
+    {
+        return view('admin.posts-create');
+    }
 }
