@@ -592,6 +592,16 @@ i.fa-power-off {
 	color: #155724;
 }
 
+.alert-failed {
+	margin-bottom: 28px;
+	border-radius: 2px;
+	border: 1px solid transparent;
+	padding: .75rem 1.25rem;
+	border-color: #ebccd1;
+	background: #f2dede;
+	color: #a94442;
+}
+
 .vcenter {
 	position: absolute;
 	top: 50%; left: 50%;

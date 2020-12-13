@@ -5,7 +5,9 @@
 
       <h1>Posts</h1>
 
-      {{ 'flash(post_message)' }}
+      @if ($message = Session::get('success'))
+        <div class="alert-success">{{ $message }}</div>
+      @endif
 
       <ul class="posts">
 

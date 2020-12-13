@@ -5,10 +5,16 @@
 
       <h1>Add new post</h1>
 
-      <form class="form" method="post" action="?url=dashboard/post/store">
+      @if ($message = Session::get('failed'))
+        <div class="alert-failed">{{ $message }}</div>
+      @endif
+
+      <form class="form" method="POST" action="/posts/store">
+
+        @csrf
 
         <label for="post_title">Post title:</label>
-        <input id="post_title" name="post_title" type="text" value="" />
+        <input id="post_title" name="title" type="text" value="" />
 
         <!-- <label for="post_url">Post URL:</label>
         <input id="post_url" name="post_url" type="url" /> -->
@@ -19,7 +25,7 @@
         <!-- <div class="form__group">
           <div class="form__content"> -->
             <label for="post_content">Post content:</label>
-            <textarea id="post_content" name="post_content"></textarea>
+            <textarea id="post_content" name="body"></textarea>
           <!-- </div> -->
 
           <!-- <div class="form__tags">

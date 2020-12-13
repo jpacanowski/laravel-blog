@@ -20,6 +20,7 @@ use App\Http\Controllers\AdminController;
 Route::get('/admin', [AdminController::class, 'index']);
 Route::get('/admin/posts', [AdminController::class, 'posts']);
 Route::get('/admin/posts/create', [PostController::class, 'create']);
+Route::post('/posts/store', [PostController::class, 'store']);
 
 // PUBLIC
 Route::get('/', [PostController::class, 'index']);
