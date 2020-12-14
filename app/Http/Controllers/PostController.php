@@ -54,6 +54,12 @@ class PostController extends Controller
         }
     }
 
+    public function edit($id)
+    {
+        $post = Post::find($id);
+        return view('admin.posts-edit', compact('post'));
+    }
+
     public function destroy($id)
     {
         $post = Post::find($id);

@@ -22,7 +22,7 @@
               <div class="row">
                 <ul class="post-entry-menu">
                   <li>
-                    <a href="/admin/posts/update/{{$post->id}}" class="btn-edit">Edytuj</a>
+                    <a href="/admin/posts/edit/{{$post->id}}" class="btn-edit">Edytuj</a>
                   </li>
                   <li>
                     <form class="form_delete" method="POST" action="/posts/delete/{{$post->id}}">
@@ -45,7 +45,7 @@
               <div class="row">
                 <ul class="post-entry-menu">
                   <li>
-                    <a href="/admin/posts/update/{{$post->id}}" class="btn-edit">Edytuj</a>
+                    <a href="/admin/posts/edit/{{$post->id}}" class="btn-edit">Edytuj</a>
                   </li>
                   <li>
                   <form class="form_delete" method="POST" action="/posts/delete/{{$post->id}}">
