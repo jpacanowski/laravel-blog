@@ -354,8 +354,8 @@ i.fa-power-off {
 	font-weight: 700;
 	font-size: 9px !important;
 	color: #fff !important;
-	background: #3cb371;
-	padding: 2px 4px;
+	background: #3cb371 !important;
+	padding: 2px 4px !important;
 }
 
 .btn-disable {

@@ -86,6 +86,17 @@ class PostController extends Controller
         }
     }
 
+    public function publish($id)
+    {
+        $post = Post::find($id);
+        $post->status = 'published';
+
+        if(!is_null($post->save()))
+        {
+            return back()->with('success', 'Post published successfully.');
+        }
+    }
+
     public function destroy($id)
     {
         $post = Post::find($id);

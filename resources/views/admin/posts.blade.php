@@ -48,7 +48,7 @@
                     <a href="/admin/posts/edit/{{$post->id}}" class="btn-edit">Edytuj</a>
                   </li>
                   <li>
-                  <form class="form_delete" method="POST" action="/posts/delete/{{$post->id}}">
+                    <form class="form_delete" method="POST" action="/posts/delete/{{$post->id}}">
                       @csrf
                       @method('DELETE')
                       <!-- <a href="/admin/posts/delete/{{$post->id}}" class="btn-delete" onclick="event.target.parentNode.submit(); return false;">Usuń</a> -->
@@ -56,7 +56,11 @@
                     </form>
                   </li>
                   <li>
-                    <a href="/admin/posts/publish/{{$post->id}}" class="btn-publish">Opublikuj</a>
+                    <form class="form_delete" method="POST" action="/posts/publish/{{$post->id}}">
+                      @csrf
+                      @method('POST')
+                      <button type="submit" class="btn-publish">Opublikuj</button>
+                    </form>
                   </li>
                 </ul>
                 <time>{{ $post->created_at }}</time>
