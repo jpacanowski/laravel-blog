@@ -17,6 +17,14 @@
         <li>
           <div class="infobox">
             <div class="infobox-inner">
+              <p>{{ phpversion() }}</p>
+              <h3>PHP version</h3>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="infobox">
+            <div class="infobox-inner">
               <p>1.0</p>
               <h3>CMS version</h3>
             </div>
